@@ -1,0 +1,32 @@
+.category-image-style {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    filter: grayscale(100%);
+    transition: .5s ;
+    backface-visibility: hidden;
+}
+.category-image-style :hover {
+    opacity: 0.3;
+}
+
+.category-text{
+    color:#fff;
+    text-align: center;
+}
+
+.category-card-bg{
+background: rgba(0, 0, 0, 0.757);
+transition: 0.5s;
+}
+
+.category-card-bg:hover{
+    background: #00000035;
+    border:none;
+}
+.category-card-bg:hover .category-image-style{
+    opacity: 0.3;
+}
+.category-card-bg:hover .category-text{
+    color:#000000;
+}

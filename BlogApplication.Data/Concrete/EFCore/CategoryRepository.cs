@@ -19,5 +19,10 @@ namespace BlogApplication.Data.Concrete.EFCore
         {
             get { return _context as BlogApp_Context; }
         }
+
+        public async Task<string> GetCategoryNameById(int id)
+        {
+            return await DbContext.Categories.Where(c => c.Id == id).Select(c => c.Title).FirstOrDefaultAsync();
+        }
     }
 }

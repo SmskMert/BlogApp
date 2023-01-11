@@ -15,5 +15,6 @@ namespace BlogApplication.Business.Abstract
         void Update(Tag tag);
         void Delete(Tag tag);
         void DeleteById(int id);
+        Task<string> GetTagNameById(int id);
     }
 }

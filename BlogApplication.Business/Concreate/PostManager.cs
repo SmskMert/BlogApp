@@ -43,6 +43,26 @@ namespace BlogApplication.Business.Concreate
             return await _postRepository.GetByIdAsync(id);
         }
 
+        public async Task<Post> GetPostByIdWithDetails(int id)
+        {
+            return await _postRepository.GetPostsByIdWithDetails(id);
+        }
+
+        public async Task<List<Post>> GetPostsByCategoryId(int id)
+        {
+            return await _postRepository.GetPostsByCategoryId(id);
+        }
+
+        public async Task<List<Post>> GetPostsByTagId(int id)
+        {
+            return await _postRepository.GetPostsByTagId(id);
+        }
+
+        public async Task<List<Post>> GetPostsWithTagsAndCategory()
+        {
+          return await _postRepository.GetPostsWithTagsAndCategory();
+        }
+
         public void Update(Post post)
         {
             _postRepository.Update(post);

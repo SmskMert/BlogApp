@@ -1,0 +1,35 @@
+.tag-image-style {
+    height: 100%;
+    filter: grayscale(100%);
+    transition: .5s ;
+    backface-visibility: hidden;
+}
+
+.tag-image-style :hover {
+    opacity: 0.3;
+}
+
+.tag-text{
+    display: none;
+    color:#fff;
+    text-align: center;
+}
+
+.tag-card-bg{
+background: rgba(0, 0, 0, 0.757);
+transition: 0.5s;
+}
+
+.tag-card-bg:hover{
+    background: #00000035;
+    border:none;
+}
+
+.tag-card-bg:hover .tag-image-style{
+    opacity: 0.3;
+}
+
+.tag-card-bg:hover .tag-text{
+    display:contents;
+    color:#000000;
+}

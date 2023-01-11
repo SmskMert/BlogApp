@@ -15,5 +15,6 @@ namespace BlogApplication.Business.Abstract
         void Update(Category category);
         void Delete(Category category);
         void DeleteById(int id);
+        Task<string> GetCategoryNameById(int id);
     }
 }

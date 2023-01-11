@@ -15,5 +15,9 @@ namespace BlogApplication.Business.Abstract
         void Update(Post post);
         void Delete(Post post);
         void DeleteById(int id);
+        Task<List<Post>> GetPostsWithTagsAndCategory();
+        Task<List<Post>> GetPostsByCategoryId(int id);
+        Task<List<Post>> GetPostsByTagId(int id);
+        Task<Post> GetPostByIdWithDetails(int id);
     }
 }

@@ -156,3 +156,7 @@ D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.A
 D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\obj\Debug\net7.0\BlogApplication.API.pdb
 D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\obj\Debug\net7.0\BlogApplication.API.genruntimeconfig.cache
 D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\obj\Debug\net7.0\ref\BlogApplication.API.dll
+D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\05.Software Development\04.BAU-BRIGHT\02.ClonedRepo\BlogApp\BlogApplication.API\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

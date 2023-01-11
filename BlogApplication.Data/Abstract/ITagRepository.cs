@@ -9,6 +9,6 @@ namespace BlogApplication.Data.Abstract
 {
     public interface ITagRepository : IGenericRepository<Tag>
     {
-
+        Task<string> GetTagNameById(int id);
     }
 }

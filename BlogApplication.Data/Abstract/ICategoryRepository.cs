@@ -9,5 +9,6 @@ namespace BlogApplication.Data.Abstract
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
+        Task<string> GetCategoryNameById(int id);
     }
 }

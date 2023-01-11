@@ -43,6 +43,11 @@ namespace BlogApplication.Business.Concreate
             return await _tagRepository.GetByIdAsync(id);
         }
 
+        public async Task<string> GetTagNameById(int id)
+        {
+            return await _tagRepository.GetTagNameById(id);
+        }
+
         public void Update(Tag tag)
         {
             _tagRepository.Update(tag);

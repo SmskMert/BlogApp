@@ -16,10 +16,14 @@ namespace BlogApplication.Data.Concrete.EFCore
         {
         }
 
-        private DbContext DbContext
+        private BlogApp_Context DbContext
         {
             get { return _context as BlogApp_Context; }
         }
 
+        public async Task<string> GetTagNameById(int id)
+        {
+            return await DbContext.Tags.Where(t => t.Id == id).Select(t => t.Title).FirstOrDefaultAsync();
+        }
     }
 }

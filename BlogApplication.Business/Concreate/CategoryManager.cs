@@ -42,5 +42,10 @@ namespace BlogApplication.Business.Concreate
         {
             _categoryRepository.DeleteById(id);
         }
+
+        public async Task<string> GetCategoryNameById(int id)
+        {
+            return await _categoryRepository.GetCategoryNameById(id);
+        }
     }
 }

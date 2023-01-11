@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BlogApplication.API.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     
     public class BlogController : ControllerBase
     {
@@ -25,6 +25,15 @@ namespace BlogApplication.API.Controllers
             return Ok(posts);
         }
 
+        [HttpGet]
+        [Route("[action]")]
+        public async Task<ActionResult<List<Post>>> GetAllPostsWithDetails()
+        {
+            var posts = await _postManager.GetPostsWithTagsAndCategory();
+            return Ok(posts);
+        }
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Post>> GetPostById(int id)
         {
@@ -35,6 +44,45 @@ namespace BlogApplication.API.Controllers
                 return NotFound();
             }
             return Ok(post);
+        }
+
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public async Task<ActionResult<Post>> GetPostByIdWithDetails(int id)
+        {
+
+            var post = await _postManager.GetPostByIdWithDetails(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return Ok(post);
+        }
+
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public async Task<ActionResult<Post>> GetPostsByCategoryId(int id)
+        {
+
+            var posts = await _postManager.GetPostsByCategoryId(id);
+            if (posts == null)
+            {
+                return NotFound();
+            }
+            return Ok(posts);
+        }
+
+        [HttpGet]
+        [Route("[action]/{id}")]
+        public async Task<ActionResult<Post>> GetPostsByTagId(int id)
+        {
+
+            var posts = await _postManager.GetPostsByTagId(id);
+            if (posts == null)
+            {
+                return NotFound();
+            }
+            return Ok(posts);
         }
 
         [HttpPost]

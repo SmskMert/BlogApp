@@ -4,6 +4,7 @@ using BlogApplication.Data.Abstract;
 using BlogApplication.Data.Concrete.EFCore;
 using BlogApplication.Data.EFCore.Concrete;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,10 +32,16 @@ builder.Services.AddCors(options =>
         });
 });
 
+
 builder.Services.AddControllers();
+
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 
 var app = builder.Build();
 
